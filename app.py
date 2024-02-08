@@ -6,7 +6,7 @@ import geopandas as gpd
 
 
 # Carga el archivo GeoJSON como un GeoDataFrame
-gdf = gpd.read_file('tu_archivo.geojson')
+gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellin 2016.geojson')
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
 df2 = pd.DataFrame(gdf)
