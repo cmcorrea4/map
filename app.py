@@ -15,7 +15,8 @@ st.write(df2.columns[1])
 st.write(df2.columns[2])
 st.write(df2.columns[3])
 st.write(df2['hora'].iloc[3])
-st.write(df2['geometry'].iloc[2].values)
+st.write(df2['geometry'].iloc[2])
+df2['geometry'].iloc[2]
 st.dataframe(df2.columns.values)
 
 geometry = df2['geometry']
