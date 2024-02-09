@@ -15,6 +15,7 @@ st.write(df2.columns[1])
 st.write(df2.columns[2])
 st.write(df2.columns[3])
 st.write(df2['hora'].iloc[3])
+st.write(df2.columns.values)
 
 
 
