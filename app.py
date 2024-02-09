@@ -10,7 +10,7 @@ gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geo
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
 df2 = pd.DataFrame(gdf)
-#st.dataframe(df2.head())
+st.write(df.columns.values[1])
 
 
 
