@@ -19,11 +19,11 @@ st.write(df2['geometry'].iloc[2])
 df2['geometry'].iloc[3]
 st.dataframe(df2.columns.values)
 
-geometry = df2['geometry']
+#geometry = df2['geometry']
 
 # Convierte la serie de geometría en un DataFrame de pandas
-df4 = pd.DataFrame(geometry)
-st.dataframe(df4)
+#df4 = pd.DataFrame(geometry)
+#st.dataframe(df4)
 
 
 
