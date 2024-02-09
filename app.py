@@ -19,6 +19,7 @@ rows = []
 for feature in data['features']:
     #name = feature['properties']['name']
     coordinates = feature['geometry']['coordinates'][0]
+    st.write(coordinates)
     for lat, lon in coordinates:
         rows.append((lat, lon))
 
