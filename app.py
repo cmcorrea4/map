@@ -20,12 +20,12 @@ for feature in data['features']:
     #name = feature['properties']['name']
     coordinates = feature['geometry']['coordinates'][0]
     st.write(coordinates)
-    for lat, lon in coordinates:
-        rows.append((lat, lon))
+    #for lat, lon in coordinates:
+    #    rows.append((lat, lon))
 
-df4 = pd.DataFrame(rows, columns=['lat', 'lon'])
+#df4 = pd.DataFrame(rows, columns=['lat', 'lon'])
 
-st.write(df4)
+#st.write(df4)
 
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
