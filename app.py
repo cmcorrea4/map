@@ -24,7 +24,7 @@ for feature in data['features']:
 
 df4 = pd.DataFrame(rows, columns=['lat', 'lon'])
 
-print(df)
+st.write(df4)
 
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
