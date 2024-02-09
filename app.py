@@ -18,6 +18,8 @@ st.write(df2['hora'].iloc[3])
 st.write(df2['geometry'].iloc[2])
 df2['geometry'].iloc[4]
 df2['geometry'].shape
+type(df2['geometry')
+st.write(df2['geometry'])
 st.dataframe(df2.columns.values)
 
 #geometry = df2['geometry']
