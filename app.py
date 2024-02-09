@@ -17,12 +17,12 @@ gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geo
 
 rows = []
 for feature in data['features']:
-    name = feature['properties']['name']
+    #name = feature['properties']['name']
     coordinates = feature['geometry']['coordinates'][0]
     for lat, lon in coordinates:
-        rows.append((name, lat, lon))
+        rows.append((lat, lon))
 
-df4 = pd.DataFrame(rows, columns=['name', 'lat', 'lon'])
+df4 = pd.DataFrame(rows, columns=['lat', 'lon'])
 
 print(df)
 
