@@ -4,7 +4,7 @@ import numpy as np
 
 import geopandas as gpd
 
-
+st.title("Accidentalidad Municipio de Medellín 2026")
 # Carga el archivo GeoJSON como un GeoDataFrame
 gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson')
 
@@ -14,6 +14,7 @@ df2 = pd.DataFrame(gdf)
 st.write(df2.columns[1])
 st.write(df2.columns[2])
 st.write(df2.columns[3])
+st.write(df2['hora'].iloc[0])
 
 
 
