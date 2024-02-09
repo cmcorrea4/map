@@ -3,10 +3,29 @@ import pandas as pd
 import numpy as np
 
 import geopandas as gpd
+import json
+
+with open('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson', "r") as read_file:
+    data = json.load(read_file)
+
+
 
 st.title("Accidentalidad Municipio de Medellín 2026")
 # Carga el archivo GeoJSON como un GeoDataFrame
 gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson')
+
+
+rows = []
+for feature in data['features']:
+    name = feature['properties']['name']
+    coordinates = feature['geometry']['coordinates'][0]
+    for lat, lon in coordinates:
+        rows.append((name, lat, lon))
+
+df4 = pd.DataFrame(rows, columns=['name', 'lat', 'lon'])
+
+print(df)
+
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
 df2 = pd.DataFrame(gdf)
