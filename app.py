@@ -7,8 +7,6 @@ import json
 with open('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson', "r") as read_file:
     data = json.load(read_file)
 
-
-
 st.title("Accidentalidad Municipio de Medellín 2016")
 # Carga el archivo GeoJSON como un GeoDataFrame
 gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson')
@@ -24,7 +22,7 @@ for feature in data['features']:
 
 dfL = pd.DataFrame({'Latitud':L[0 : 10]})
 #df5 = pd.DataFrame(lat, columns=['latitud'])
-
+st.write(dfL.columns[2])
 #st.write(df4)
 
 
