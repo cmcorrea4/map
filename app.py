@@ -23,6 +23,8 @@ for feature in data['features']:
 #    for lat in coordinates:
     lat.append(lat)
 
+df4 = pd.DataFrame({'Latitud':lat})
+
 #df4 = pd.DataFrame(lat, columns=['latitud'])
 
 #st.dataframe(df4)
