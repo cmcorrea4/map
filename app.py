@@ -29,8 +29,8 @@ for feature in data['features']:
     hour.append(Hora)
     neig.append(barrio)
     
-nm=100
-
+#nm=100
+nm= st.slider('Que número de accidentes quieres visualizar', 1, 200, 5)
 
 
 dfLa = pd.DataFrame({'lat':La[0 : nm]})
