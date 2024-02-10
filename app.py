@@ -24,7 +24,7 @@ for feature in data['features']:
     lat.append(lat)
 
 dfL = pd.DataFrame({'Latitud':lat[0 : 10]})
-df5 = pd.DataFrame(lat, columns=['latitud'])
+#df5 = pd.DataFrame(lat, columns=['latitud'])
 
 #st.write(df4)
 
