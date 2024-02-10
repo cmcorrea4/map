@@ -14,16 +14,22 @@ gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geo
 
 La = []
 Lo= []
+day=[]
     
 for feature in data['features']:
     coordinates = feature['geometry']['coordinates']
     La.append(coordinates[1])
     Lo.append(coordinates[0])  
+    dia=feature['dia']
+    day.append(dia)
 nm=200
+
+
 
 dfLa = pd.DataFrame({'lat':La[0 : nm]})
 dfLo = pd.DataFrame({'lon':Lo[0 : nm]})
-df_g=pd.concat([dfLa, dfLo], axis=1)
+dfdia= pd.DataFrame({'día' :day[0:nm]})
+df_g=pd.concat([dfLa, dfLo, dfdia], axis=1)
 
 st.write(df_g)
 
