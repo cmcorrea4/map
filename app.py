@@ -24,7 +24,7 @@ for feature in data['features']:
     lat.append(lat)
 
 dfL = pd.DataFrame({'Latitud':lat[0 : 10]})
-#df4 = pd.DataFrame(lat, columns=['latitud'])
+df5 = pd.DataFrame(lat, columns=['latitud'])
 
 #st.write(df4)
 
@@ -54,8 +54,7 @@ df2['geometry'].shape
 
 
 df = pd.DataFrame(
-    #np.random.randn(100, 2) / [50, 50] + [6.250136, -75.566067],  #6.250136 -75.566067
-    6.250136 -75.566067,
+    np.random.randn(100, 2) / [50, 50] + [6.250136, -75.566067],  #6.250136 -75.566067
     columns=['lat', 'lon'])
 
 st.map(df)
