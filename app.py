@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
 import geopandas as gpd
 import json
 
@@ -19,10 +18,10 @@ lat = []
 for feature in data['features']:
     #name = feature['properties']['name']
     coordinates = feature['geometry']['coordinates'][1]
-    st.write(coordinates)
+    #st.write(coordinates)
     
 #    for lat in coordinates:
-    lat.append((lat)
+    lat.append(lat)
 
 #df4 = pd.DataFrame(lat, columns=['latitud'])
 
