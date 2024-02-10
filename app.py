@@ -21,7 +21,7 @@ for feature in data['features']:
     coordinates = feature['geometry']['coordinates'][0]
     Lo.append(coordinates)    
 
-nm=100
+nm=200
 
 dfLa = pd.DataFrame({'lat':La[0 : nm]})
 dfLo = pd.DataFrame({'lon':Lo[0 : nm]})
