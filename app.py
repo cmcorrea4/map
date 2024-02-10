@@ -20,7 +20,7 @@ for feature in data['features']:
     coordinates = feature['geometry']['coordinates']
     La.append(coordinates[1])
     Lo.append(coordinates[0])  
-    dia=feature['dia']
+    dia=feature['properties']['dia']
     day.append(dia)
 nm=200
 
