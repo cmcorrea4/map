@@ -27,7 +27,7 @@ df4 = pd.DataFrame({'Latitud':lat[0 : 10]})
 
 #df4 = pd.DataFrame(lat, columns=['latitud'])
 
-#st.dataframe(df4.head(10))
+st.dataframe(df4)
 
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
