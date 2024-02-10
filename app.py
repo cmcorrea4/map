@@ -28,7 +28,7 @@ df_g=pd.concat([dfLa, dfLo], axis=1)
 #df5 = pd.DataFrame(lat, columns=['latitud'])
 st.write(df_g)
 #st.write(df4)
-
+#st.map(df_g)
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
 df2 = pd.DataFrame(gdf)
@@ -56,3 +56,4 @@ df = pd.DataFrame(
     columns=['lat', 'lon'])
 
 st.map(df)
+st.write(df)
