@@ -17,17 +17,20 @@ Lo= []
 day=[]
 hour=[]
 neig=[]
-    
+dir=[]    
 for feature in data['features']:
     coordinates = feature['geometry']['coordinates']
     dia=feature['properties']['dia']
     Hora=feature['properties']['hora']
     barrio=feature['properties']['barrio']
+    direccion=feature['properties']['direccion']
     La.append(coordinates[1])
     Lo.append(coordinates[0])  
     day.append(dia)
     hour.append(Hora)
     neig.append(barrio)
+    dir.append(direccion)
+    
     
 #nm=100
 nm= st.slider('Selecciona el número de registros de accidentes quieres visualizar', 1, 200, 5)
@@ -38,7 +41,8 @@ dfLo = pd.DataFrame({'lon':Lo[0 : nm]})
 dfdia= pd.DataFrame({'día' :day[0:nm]})
 dfhor= pd.DataFrame({'Hora' :hour[0:nm]})
 dfbarr=pd.DataFrame({'Barrio':neig[0:nm]})
-df_g=pd.concat([dfLa, dfLo, dfdia, dfhor,dfbarr], axis=1)
+dfdir=pd.DataFrame({'Dirección':dir[0:nm]})
+df_g=pd.concat([dfLa, dfLo, dfdia, dfhor,dfdir,dfbarr], axis=1)
 
 st.write(df_g)
 
