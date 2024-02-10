@@ -18,7 +18,7 @@ for feature in data['features']:
     #st.write(coordinates)
     
 #    for lat in coordinates:
-    L.append(L)
+    L.append(coordinates)
 
 dfL = pd.DataFrame({'Latitud':L[0 : 10]})
 #df5 = pd.DataFrame(lat, columns=['latitud'])
