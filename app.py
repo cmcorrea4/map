@@ -21,8 +21,10 @@ for feature in data['features']:
     coordinates = feature['geometry']['coordinates'][0]
     Lo.append(coordinates)    
 
-dfLa = pd.DataFrame({'lat':La[0 : 10]})
-dfLo = pd.DataFrame({'lon':Lo[0 : 10]})
+nm=50
+
+dfLa = pd.DataFrame({'lat':La[0 : nm]})
+dfLo = pd.DataFrame({'lon':Lo[0 : nm]})
 df_g=pd.concat([dfLa, dfLo], axis=1)
 
 #df5 = pd.DataFrame(lat, columns=['latitud'])
