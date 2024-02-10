@@ -20,7 +20,7 @@ hour=[]
 for feature in data['features']:
     coordinates = feature['geometry']['coordinates']
     dia=feature['properties']['dia']
-    Hora=feature['properties']['Hora']
+    Hora=feature['properties']['hora']
     La.append(coordinates[1])
     Lo.append(coordinates[0])  
     day.append(dia)
