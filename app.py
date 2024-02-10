@@ -14,12 +14,18 @@ gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geo
 
 La = []
 Lo= []
+#for feature in data['features']:
+#    coordinates = feature['geometry']['coordinates'][1]
+#    La.append(coordinates)
+#for feature in data['features']:
+#    coordinates = feature['geometry']['coordinates'][0]
+#    Lo.append(coordinates)    
+
 for feature in data['features']:
-    coordinates = feature['geometry']['coordinates'][1]
-    La.append(coordinates)
-for feature in data['features']:
-    coordinates = feature['geometry']['coordinates'][0]
-    Lo.append(coordinates)    
+    coordinates = feature['geometry']['coordinates']
+    La.append(coordinates[1])
+    Lo.append(coordinates[0])  
+
 
 nm=200
 
