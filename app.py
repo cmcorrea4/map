@@ -23,9 +23,9 @@ for feature in data['features']:
     for lat in coordinates:
         lat.append((lat)
 
-df4 = pd.DataFrame(lat, columns=['latitud'])
+#df4 = pd.DataFrame(lat, columns=['latitud'])
 
-st.dataframe(df4)
+zst.dataframe(df4)
 
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
