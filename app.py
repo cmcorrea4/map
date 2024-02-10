@@ -22,7 +22,7 @@ for feature in data['features']:
 
 dfL = pd.DataFrame({'Latitud':L[0 : 10]})
 #df5 = pd.DataFrame(lat, columns=['latitud'])
-st.write(dfL.columns[2])
+st.write(dfL.columns[0])
 #st.write(df4)
 
 
