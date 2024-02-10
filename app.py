@@ -12,15 +12,18 @@ st.title("Accidentalidad Municipio de Medellín 2016")
 gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson')
 
 
-L = []
+La = []
+Lo= []
 for feature in data['features']:
     coordinates = feature['geometry']['coordinates'][1]
-    #st.write(coordinates)
-    
-#    for lat in coordinates:
-    L.append(coordinates)
+    La.append(coordinates)
+for feature in data['features']:
+    coordinates = feature['geometry']['coordinates'][0]
+    Lo.append(coordinates)    
 
-dfL = pd.DataFrame({'Latitud':L[0 : 10]})
+dfLa = pd.DataFrame({'Latitud':La[0 : 10]})
+dfLa = pd.DataFrame({'Longitud':Lo[0 : 10]})
+
 #df5 = pd.DataFrame(lat, columns=['latitud'])
 st.write(dfL)
 #st.write(df4)
