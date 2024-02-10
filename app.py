@@ -22,10 +22,11 @@ for feature in data['features']:
     Lo.append(coordinates)    
 
 dfLa = pd.DataFrame({'Latitud':La[0 : 10]})
-dfLa = pd.DataFrame({'Longitud':Lo[0 : 10]})
+dfLo = pd.DataFrame({'Longitud':Lo[0 : 10]})
+df_g=pd.concat([dfLa, dfLo], axis=1)
 
 #df5 = pd.DataFrame(lat, columns=['latitud'])
-st.write(dfL)
+st.write(df_g)
 #st.write(df4)
 
 
