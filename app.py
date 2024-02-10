@@ -19,9 +19,10 @@ lat = []
 for feature in data['features']:
     #name = feature['properties']['name']
     coordinates = feature['geometry']['coordinates'][1]
-#    st.write(coordinates)
-    for lat in coordinates:
-        lat.append((lat)
+    st.write(coordinates)
+    
+#    for lat in coordinates:
+    lat.append((lat)
 
 #df4 = pd.DataFrame(lat, columns=['latitud'])
 
