@@ -14,28 +14,19 @@ gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geo
 
 La = []
 Lo= []
-#for feature in data['features']:
-#    coordinates = feature['geometry']['coordinates'][1]
-#    La.append(coordinates)
-#for feature in data['features']:
-#    coordinates = feature['geometry']['coordinates'][0]
-#    Lo.append(coordinates)    
-
+    
 for feature in data['features']:
     coordinates = feature['geometry']['coordinates']
     La.append(coordinates[1])
     Lo.append(coordinates[0])  
-
-
 nm=200
 
 dfLa = pd.DataFrame({'lat':La[0 : nm]})
 dfLo = pd.DataFrame({'lon':Lo[0 : nm]})
 df_g=pd.concat([dfLa, dfLo], axis=1)
 
-#df5 = pd.DataFrame(lat, columns=['latitud'])
 st.write(df_g)
-#st.write(df4)
+
 st.map(df_g)
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
