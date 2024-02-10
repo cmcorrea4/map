@@ -16,15 +16,18 @@ La = []
 Lo= []
 day=[]
 hour=[]
+neig=[]
     
 for feature in data['features']:
     coordinates = feature['geometry']['coordinates']
     dia=feature['properties']['dia']
     Hora=feature['properties']['hora']
+    barrio=feature['properties']['barrio']
     La.append(coordinates[1])
     Lo.append(coordinates[0])  
     day.append(dia)
     hour.append(Hora)
+    neig.append(barrio)
     
 nm=100
 
@@ -34,7 +37,8 @@ dfLa = pd.DataFrame({'lat':La[0 : nm]})
 dfLo = pd.DataFrame({'lon':Lo[0 : nm]})
 dfdia= pd.DataFrame({'día' :day[0:nm]})
 dfhor= pd.DataFrame({'Hora' :hour[0:nm]})
-df_g=pd.concat([dfLa, dfLo, dfdia, dfhor], axis=1)
+dfbarr=pd.DataFrame({'Barrio':neig[0:nm]})
+df_g=pd.concat([dfLa, dfLo, dfdia, dfhor,dfbarr], axis=1)
 
 st.write(df_g)
 
