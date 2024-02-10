@@ -15,21 +15,26 @@ gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geo
 La = []
 Lo= []
 day=[]
+hour=[]
     
 for feature in data['features']:
     coordinates = feature['geometry']['coordinates']
+    dia=feature['properties']['dia']
+    Hora=feature['properties']['Hora']
     La.append(coordinates[1])
     Lo.append(coordinates[0])  
-    dia=feature['properties']['dia']
     day.append(dia)
-nm=200
+    hour.append(Hora)
+    
+nm=100
 
 
 
 dfLa = pd.DataFrame({'lat':La[0 : nm]})
 dfLo = pd.DataFrame({'lon':Lo[0 : nm]})
 dfdia= pd.DataFrame({'día' :day[0:nm]})
-df_g=pd.concat([dfLa, dfLo, dfdia], axis=1)
+dfhor= pd.DataFrame({'Hora' :hour[0:nm]})
+df_g=pd.concat([dfLa, dfLo, dfdia, dfhor], axis=1)
 
 st.write(df_g)
 
