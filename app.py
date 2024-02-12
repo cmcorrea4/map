@@ -45,6 +45,8 @@ dfdir=pd.DataFrame({'Dirección':dir[0:nm]})
 df_g=pd.concat([dfLa, dfLo, dfdia, dfhor,dfdir,dfbarr], axis=1)
 
 st.write(df_g)
+st.subheader('Organizado por tiempo')
+df_g = df_g.sort_values('Hora')
 
 st.map(df_g)
 
