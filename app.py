@@ -33,7 +33,7 @@ for feature in data['features']:
     
     
 #nm=100
-nm= st.slider('Selecciona el número de registros de accidentes quieres visualizar', 0, 1500)
+nm= st.slider('Selecciona el número de registros de accidentes quieres visualizar', 5, 1500)
 
 
 dfLa = pd.DataFrame({'lat':La[0 : nm]})
