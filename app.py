@@ -9,7 +9,7 @@ with open('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson', "r"
 
 st.title("Accidentalidad Municipio de Medellín 2016")
 # Carga el archivo GeoJSON como un GeoDataFrame
-gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson')
+#gdf = gpd.read_file('Mapa de Accidentalidad Vial Municipio de Medellín 2016.geojson')
 
 
 La = []
@@ -49,15 +49,15 @@ st.write(df_g)
 st.map(df_g)
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
-df2 = pd.DataFrame(gdf)
+#df2 = pd.DataFrame(gdf)
 
-st.write(df2.columns[1])
-st.write(df2.columns[2])
-st.write(df2.columns[3])
-st.write(df2['hora'].iloc[3])
-st.write(df2['geometry'].iloc[2])
-df2['geometry'].iloc[4]
-df2['geometry'].shape
+#st.write(df2.columns[1])
+#st.write(df2.columns[2])
+#st.write(df2.columns[3])
+#st.write(df2['hora'].iloc[3])
+#st.write(df2['geometry'].iloc[2])
+#df2['geometry'].iloc[4]
+#df2['geometry'].shape
 #type(df2['geometry'])
 #st.write(df2['geometry'])
 #st.dataframe(df2.columns.values)
