@@ -51,6 +51,7 @@ st.write(df_g)
 st.map(df_g)
 
 st.subheader('Organizado por Horas más cercanas')
+df_g['Hora'] = pd.to_datetime(df_g['Hora'])
 df_g['Hora'] = df_g['Hora'].dt.round('H').dt.time
 
 # Agrupa el DataFrame por la columna "Hora"
