@@ -56,6 +56,8 @@ option_day = st.selectbox('Selecciona filtro por día',('LUNES', 'MARTES', 'MIÉ
 #df_filtrado = df_g.query('día == "MIÉRCOLES" and Hora >= "08:00:00" and Hora <= "10:00:00"')
 df_filtrado = df_g.query('día == @option_day and Hora >=  @option_hour_min ')
 st.dataframe(df_filtrado)
+st.write("Cantidad de Incidentes dentro del filtro")
+st.write(df_filtrado.count())
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
 #df2 = pd.DataFrame(gdf)
