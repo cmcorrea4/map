@@ -33,7 +33,7 @@ for feature in data['features']:
     
     
 #nm=100
-nm= st.slider('Selecciona el número de registros de accidentes quieres visualizar', 1, 200, 5)
+nm= st.slider('Selecciona el número de registros de accidentes quieres visualizar', 1, 500)
 
 
 dfLa = pd.DataFrame({'lat':La[0 : nm]})
@@ -44,7 +44,7 @@ dfbarr=pd.DataFrame({'Barrio':neig[0:nm]})
 dfdir=pd.DataFrame({'Dirección':dir[0:nm]})
 df_g=pd.concat([dfLa, dfLo, dfdia, dfhor,dfdir,dfbarr], axis=1)
 
-st.write(df_g)
+st.dataframe(df_g)
 st.map(df_g)
 
 st.subheader('Filtrado')
@@ -55,7 +55,7 @@ option_hour_max = st.selectbox('Selecciona filtro por Hora',
 option_day = st.selectbox('Selecciona filtro por día',('LUNES', 'MARTES', 'MIÉRCOLES','JUEVES','VIERNES','SÁBADO','DOMINGO'))
 #df_filtrado = df_g.query('día == "MIÉRCOLES" and Hora >= "08:00:00" and Hora <= "10:00:00"')
 df_filtrado = df_g.query('día == @option_day and Hora >=  @option_hour_min ')
-st.write(df_filtrado)
+st.dataframe(df_filtrado)
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
 #df2 = pd.DataFrame(gdf)
