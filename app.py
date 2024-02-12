@@ -50,6 +50,13 @@ df_g = df_g.sort_values('Hora')
 st.write(df_g)
 st.map(df_g)
 
+st.subheader('Organizado por Horas más cercanas')
+df_g['Hora'] = df_g['Hora'].dt.round('H').dt.time
+
+# Agrupa el DataFrame por la columna "Hora"
+df_grouped = df_g.groupby('Hora')
+st.write(df_grouped)
+
 # Convierte el GeoDataFrame en un DataFrame de pandas
 #df2 = pd.DataFrame(gdf)
 
