@@ -52,7 +52,7 @@ st.map(df_g)
 
 st.subheader('Filtrado')
 
-df_filtrado = df_g.query('día == "JUEVES" and Hora >= "08:00:00" and Hora <= "10:00:00"')
+df_filtrado = df_g.query('día == "MIÉRCOLES" and Hora >= "08:00:00" and Hora <= "10:00:00"')
 st.write(df_filtrado)
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
