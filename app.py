@@ -50,13 +50,10 @@ df_g = df_g.sort_values('Hora')
 st.write(df_g)
 st.map(df_g)
 
-st.subheader('Organizado por Horas más cercanas')
-df_g['Hora'] = pd.to_datetime(df_g['Hora'])
-df_g['Hora'] = df_g['Hora'].dt.round('h').dt.time
+st.subheader('Filtrado')
 
-# Agrupa el DataFrame por la columna "Hora"
-df_grouped = df_g.groupby('Hora')
-st.write(df_grouped)
+df_filtrado = df_g.query('día == "JUEVES" and Hora >= "08:00:00" and Hora <= "10:00:00"')
+st.write(df_filtrado)
 
 # Convierte el GeoDataFrame en un DataFrame de pandas
 #df2 = pd.DataFrame(gdf)
