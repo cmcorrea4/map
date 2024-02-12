@@ -52,7 +52,7 @@ st.map(df_g)
 
 st.subheader('Organizado por Horas más cercanas')
 df_g['Hora'] = pd.to_datetime(df_g['Hora'])
-df_g['Hora'] = df_g['Hora'].dt.round('H').dt.time
+df_g['Hora'] = df_g['Hora'].dt.round('h').dt.time
 
 # Agrupa el DataFrame por la columna "Hora"
 df_grouped = df_g.groupby('Hora')
